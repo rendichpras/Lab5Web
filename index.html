@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praktikum JavaScript</title>
+  </head>
+  <body>
+    <h1>Pengenalan JavaScript</h1>
+    <p id="pesan">Konten awal.</p>
+
+    <label for="bilangan">Masukkan bilangan bulat:</label>
+    <input type="number" id="bilangan" step="1" />
+    <button type="button" onclick="cekBilangan()">Periksa</button>
+    <p id="hasilBilangan"></p>
+
+    <button type="button" onclick="ubahWarnaLatar('lightgreen')">Latar Hijau</button>
+    <button type="button" onclick="ubahWarnaLatar('white')">Latar Putih</button>
+    <button type="button" onclick="ubahWarnaLatar('lightyellow')">Latar Kuning</button>
+
+    <h3>Daftar Menu Makanan</h3>
+    <label><input type="checkbox" class="menu" value="5000" /> Ayam Goreng — Rp5.000</label><br />
+    <label><input type="checkbox" class="menu" value="500" /> Tempe — Rp500</label><br />
+    <label><input type="checkbox" class="menu" value="2500" /> Telur Dadar — Rp2.500</label><br />
+    <label><input type="checkbox" class="menu" value="1000" /> Sambal — Rp1.000</label><br />
+    <label><input type="checkbox" class="menu" value="3000" /> Es Teh — Rp3.000</label>
+    <p>Total: Rp<span id="total">0</span></p>
+
+    <h2>F. Mini Project — Kalkulator Nilai Mahasiswa</h2>
+    <p>Masukkan nilai tugas, UTS, dan UAS. Bobot nilai akhir adalah 30%, 30%, dan 40%.</p>
+    <form id="formNilaiMahasiswa" novalidate>
+      <label for="nilaiTugas">Nilai Tugas (0–100):</label>
+      <input type="number" id="nilaiTugas" min="0" max="100" step="any" required />
+      <br />
+      <label for="nilaiUts">Nilai UTS (0–100):</label>
+      <input type="number" id="nilaiUts" min="0" max="100" step="any" required />
+      <br />
+      <label for="nilaiUas">Nilai UAS (0–100):</label>
+      <input type="number" id="nilaiUas" min="0" max="100" step="any" required />
+      <br />
+      <button type="submit">Hitung Nilai Akhir</button>
+    </form>
+    <p id="pesanValidasiNilai" role="alert"></p>
+    <div id="hasilNilaiMahasiswa" aria-live="polite" hidden>
+      <p>Nilai akhir: <strong id="nilaiAkhir"></strong></p>
+      <p>Predikat: <strong id="predikat"></strong></p>
+      <p>Status: <strong id="statusKelulusan"></strong></p>
+    </div>
+
+    <h2>G. Eksperimen Mandiri</h2>
+    <h3>1. Operasi aritmetika dari prompt</h3>
+    <p>Masukkan dua nilai melalui prompt. Nilai akan dikonversi menjadi number sebelum dihitung.</p>
+    <button type="button" id="tombolOperasiPrompt">Masukkan Dua Nilai</button>
+    <pre id="hasilOperasiPrompt" aria-live="polite"></pre>
+
+    <h3>7. Tabel perkalian 7</h3>
+    <table>
+      <thead><tr><th>Perhitungan</th><th>Hasil</th></tr></thead>
+      <tbody id="isiTabelPerkalian"></tbody>
+    </table>
+
+    <h3>8. Function cekGenap(angka)</h3>
+    <label for="angkaEksperimen">Masukkan bilangan bulat:</label>
+    <input type="number" id="angkaEksperimen" step="1" />
+    <button type="button" id="tombolCekGenap">Cek Genap</button>
+    <p id="hasilCekGenap" aria-live="polite"></p>
+
+    <h3>9. Validasi kolom form</h3>
+    <p>Form kalkulator nilai menolak kolom kosong dan nilai di luar rentang 0–100.</p>
+
+    <h3>11. Tampilkan atau sembunyikan elemen</h3>
+    <button type="button" id="tombolToggle" aria-expanded="true" aria-controls="kontenToggle">
+      Sembunyikan keterangan
+    </button>
+    <p id="kontenToggle">Elemen ini dapat disembunyikan dan ditampilkan kembali menggunakan tombol.</p>
+
+    <script src="script.js"></script>
+  </body>
+</html>
